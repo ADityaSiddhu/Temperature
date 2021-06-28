@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainTemperature"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D09E9797"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvTemp"
+        app:srcCompat="@drawable/cloud" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/weather" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvTemp"
+        android:layout_width="300dp"
+        android:layout_height="420dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="164dp"
+        android:layout_marginRight="40dp"
+        android:foregroundGravity="center"
+        app:cardBackgroundColor="#EDFAB5"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="170dp"
+            android:layout_marginTop="185dp"
+            android:background="@drawable/btn_round"
+            android:text="RESET"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/tvF"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="340dp"
+            android:background="@drawable/round_corner"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Temperature in FAHRENHEIT !"
+            android:inputType="number"
+            android:paddingLeft="15dp"
+            android:textColor="#000000"
+            android:textColorHint="#8E8484"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvFahrenheit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="310dp"
+            android:text="Tepmerature in FAHRENHEIT is :"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvdash2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="250dp"
+            android:text="----------------------------------------------------------------"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/tvCelcius"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:text="Enter the Tepmerature in Celcius"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etCelcius"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/round_corner"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Enter Temperature"
+            android:inputType="number"
+            android:paddingLeft="15dp"
+            android:textColor="#000000"
+            android:textColorHint="#8E8484" />
+
+        <TextView
+            android:id="@+id/tvdash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="150dp"
+            android:text="----------------------------------------------------------------"
+            android:textColor="#000000" />
+
+        <Button
+            android:id="@+id/btnConvert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="185dp"
+            android:background="@drawable/btn_round"
+            android:text="CONVERT"
+            android:textColor="#FFFFFF" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvWeather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="16dp"
+        android:text="WEATHER !!"
+        android:textColor="#63FFFA"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvToday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="116dp"
+        android:text="TODAY'S"
+        android:textColor="#63FFFA"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvWeather"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvTemp"
+        app:srcCompat="@drawable/cloud" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
